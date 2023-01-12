@@ -1,0 +1,22 @@
+---
+import data from '../../config/projects.json'
+
+---
+<section>
+
+    <h2 class="font-bold text-5xl my-5">Projects</h2>
+    {
+        data.map(dat=>(
+            <div class="flex flex-col mb-2 text-center md:text-left md:flex-row">
+                <div class="flex-1 my-4">
+                    <h3 class="font-bold text-2xl my-4">{dat.title}</h3>    
+                    <p>{dat.description}</p> 
+                    <button class="bg-indigo-500 px-3 py-2 hover:bg-indigo-400">more</button>                   
+                </div>
+                <div>
+                    <img src={dat.image} class="w-72 m-auto" alt="">
+                </div>
+            </div>
+        ))
+    }
+</section>
